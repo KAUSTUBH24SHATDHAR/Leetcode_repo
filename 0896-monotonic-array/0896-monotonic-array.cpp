@@ -10,6 +10,7 @@ public:
         if(nums[i]<nums[i+1]){
             
             inc=false;
+            break;
         }
     }
     
@@ -17,6 +18,7 @@ public:
         
         if(nums[i]>nums[i+1]){
             dec = false;
+            break;
         }
     }
     
