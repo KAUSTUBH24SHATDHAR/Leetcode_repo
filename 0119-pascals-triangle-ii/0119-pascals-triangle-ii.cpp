@@ -1,13 +1,25 @@
 class Solution {
 public:
-    std::vector<int> getRow(int rowIndex) {
-        std::vector<int> res(1, 1);
-        long long prev = 1;
-        for(int k = 1; k <= rowIndex; k++) {
-            long long next_val = prev * (rowIndex - k + 1) / k;
-            res.push_back(next_val);
-            prev = next_val;
+    vector<int> getRow(int rowIndex) {
+        
+        vector<int>v;
+        
+        int n= rowIndex+1;
+        
+        
+        long long ans= 1;
+        v.push_back(ans);
+        
+        for(int i=1;i<n;i++){
+            
+            ans = ans*(n-i);
+            ans= ans/i;
+            
+            v.push_back(ans);
         }
-        return res;
+        
+        return v;
+        
     }
+       
 };
